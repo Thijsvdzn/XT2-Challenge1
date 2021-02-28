@@ -1,208 +1,66 @@
-html {
-	box-sizing: border-box;
-}
-
 body{
     font-family: Lato, 'Arial', verdana, sans-serif;
-	background-color: #E3EAC7;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
     text-align: center;
-    font-size: 28px;
+    font-size: 36px;
+    color: #444444;
 }
 
-h2 {
-    font-size: 24px;
-    text-align: center;
-}
-
-.header, .main, .ad1, .ad2, .foot{
+.header, .main, .foot{
   	padding: 0.2em 1em;
 }
 
-.header, .foot{
-    background-color: #CADC49;
+.header{
+    background-color: #B1B1B1;
 }
 
-#menu {
-	background-color: #A4B525
-}
-
-.info ul {
-	list-style-type: none;
-	text-align:center;
-}
-
-img {
-	width: 100%;
-	max-height: 300px;
-}
-
-.main p{
-	margin: 1em;
-}
-
-@media only screen and (min-width: 601px){
-  q {
-    width: 6em;
-    float: right;
-    font-size: 1.4em;
-    padding: 0.5em;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-  }
-}
-
-/*
-  header styles
-*/
-header {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-}
-
-.menutoggle {
-  margin-left: auto;
-}
-
-.menutoggle a{
-  font-size: 2em;
-  color: #FFF;
-  text-decoration: none;
-}
-
-.active {
-  width: 200px;
-  transition: width 0.6s;
-}
-
-.inactive {
-  width: 0;
-  transition: width 0.6s;
-}
-
-
-/*
-  Nav styles
-*/
-
-
-nav {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-  height: 100vh; 
-  display: flex;
-  flex-flow: column;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul {
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  display: flex;
-  padding: 1em;
-  margin: 0;
-  list-style: none;
-  justify-content: center;
-  border-bottom: 1px solid black;
-}
-
-nav ul li:hover {
-  background-color: rgba(50, 50, 50, 0.5);
-}
-
-nav > ul > li > a {
-  	text-decoration: none;
-	color: black;
-}
-
-@media only screen and (min-width: 601px){
-  /* 
-    menutoggle styles
-  */
-  .menutoggle {
-    display: none;
-  }
-
-  .active, .inactive {
-    width: unset;
-  }
-  /*
-    Nav styles
-  */
-  nav {
-    position: static;
-    height: unset;
-    display: flex;
-    flex-flow: row;
-  }
-  nav ul{
-    display: flex;
-    flex-flow: row;
-    justify-content: space-around;
-    padding: 0;
-  }
-  nav ul li {
-    display: flex;
-    padding: 1em;
-    margin: 0;
-    list-style: none;
+.foot{
+    display:flex;
     justify-content: center;
-    border: none;
-  }
-
 }
 
-@media only screen and (min-width: 501px) and (max-width: 750px){
+.section1, .section2, .section3, .section4 {
+    width: 90vw;
+    max-width: 750px;
+}
+
+button{
+    width: 200px;
+    color: #444444;
+    background-color: #B1B1B1;
+}
+
+@media only screen and (max-width: 768px){
 	.main{
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr ;
+		grid-template-columns: 1fr;
 	}
 }
 
-@media only screen and (min-width: 751px) and (max-width: 1280px){
+@media only screen and (min-width: 769px) and (max-width: 1280px){
 	.main{
 	  display: grid;
-	  grid-template-columns: 1fr 1fr 1fr ;
+	  grid-template-columns: 1fr 1fr;
 	}
     
-    .foot{
-	  display: grid;
-	  grid-template-columns: 1fr 1fr ;
-	}
+    .section1, .section2, .section3, .section4 {
+        width: 45vw;
+        max-width: 500px;
+    }
 }
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1281px){
 	.main{
 	  	display: grid;
-	  	grid-template-columns: 1fr 1fr 1fr;
+	  	grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 	
-	.foot{
-	  display: grid;
-	  grid-template-columns: 1fr 1fr ;
-	}
-	
-	h1 {
-		font-size: 36px;
-	}
-	
-	h2{
-		font-size: 28px;
-	}
-	
-	p{
-		font-size 28px;
-	}
+    .section1, .section2, .section3, .section4 {
+        width: 80vw;
+        max-width: 350px;
+    }
 }

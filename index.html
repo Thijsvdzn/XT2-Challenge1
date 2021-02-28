@@ -2,87 +2,45 @@
 <html lang="nl">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Buurtsuper Leo van der Drift</title>
+		<title>Tesla Dashboard</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Asap+Condensed" rel="stylesheet" />
-		<link type="text/css" href="styles/main.css" rel="stylesheet" />	
+		<link type="text/css" href="styles/main.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
 	</head>
+    
 	<body>
-	  	<header class="grid-item header">
-	  		<h1>Buurtsuper Leo v.d. Drift</h1>
-	  		<div class="menutoggle">
-		  		<a href="#">&#9776;</a>
-		  	</div>
-	  	</header>
-	    <nav id="menu" class="inactive">
-	    	<ul>
-                <li><a href="#">Home</a></li>
-				<li><a href="#">Over ons</a></li>
-                <li><a href="#">Kantoren en bedrijven</a></li>
-             	<li><a href="#">Bestellen</a></li>
-            </ul>
-	    </nav>
-		<div class="grid-item banner">
-				<figure>
-					<img src="images/GroenteEnFruit.jpg">
-				</figure>
+		<div class="grid-item header">
+            <h1>Tesla Dashboard</h1>
 		</div>
-	    <main class="grid-item main">
+        
+        <main class="grid-item main">
+            
 	    	<div class="grid-item section1">
-                    <h2>Elke dag vers brood</h2>
-                    <figure>
-                        <img src="images/brood.jpg" />
-                    </figure>
-                    <p>Elke dag hebben wij vers brood wit / bruin / puntjes / krentenbollen noem maar op van de warme bakker Laurens Bosman uit Rijswijk. Ook bakken wij zelf bepaalde broodjes zoals croisants, stokbrood ook appelflappen bakken we zelf lekker voor bij de koffie. </p>
-                </div>
-            
-                <div class="grid-item section2">
-                    <h2>Elke dag vers fruit</h2>
-                    <figure>
-                        <img src="images/fruit.jpg" />
-                    </figure>
-                    <p>Wat is er lekkerder als een stukje fruit gezond voor bij de lunch of na de avondmaal. Elke dag word ons assortiment aangevuld met vers fruit, bestel het mee voor bij de lunch. </p>
-                </div>
-            
-                <div class="grid-item section3">
-                    <h2>Elke dag vers beleg</h2>
-                    <figure>
-                        <img src="images/beleg.jpg" />
-                    </figure>
-                    <p>Elke dag vers beleg gesneden van het mes en vers verpakt, uw belegsoorten hebben we in huis geniet ervan lekker op uw brood. </p>
-                </div>
-	    </main>
-
-	    <footer class="grid-item foot">
-			<div class="grid-item map">
-                    <figure>
-						<img srcset="images/KwaliteitKaart.jpg  1024w,
-			      		 images/MindereKwaliteitKaart.jpg   640w"
-			   sizes="(min-width: 640px) 25vw"
-			   src="images/MindereKwaliteitKaart.jpg" />
-                    </figure>
-                </div>
                 
-                <div class="grid-item info">
-                    <ul>
-						<li>Linnaeusstraat 175</li>
-						<li>Email: info@buurtsuperleovddrift.nl</li>
-						<li>Telefoon: (070) 4140891</li>
-					</ul>
-					
-					<ul>
-						<li>Onze Openingstijden zijn:</li>
-						<li><strong>Maandag t/m vrijdag van:</strong></li>
-						<li>7:30 tot 19:00 uur</li>
-						<li><strong>Zaterdag van:</strong></li>
-						<li>7:30 tot 17:00 uur</li>
-						<li><strong>Zondag van:</strong></li>
-						<li>10:00 tot 17:00 uur</li>
-					</ul>
-                </div>
+                <canvas id="foodChart"></canvas>
+                
+            </div>
+                    
+            <div class="grid-item section2">
+                <canvas id="waterChart"></canvas>
+            </div>
+            
+            <div class="grid-item section3">
+                <canvas id="distanceTravelledChart"></canvas>
+            </div>
+            
+            <div class="grid-item section3">
+                <canvas id="speedChart"></canvas>
+            </div>
+
+        </main>
+        
+	    <footer class="grid-item foot">
+            <button type="button" onclick="nextWeek()">Next week</button>
 		</footer>
-
-
+        
 	  <script src="scripts/main.js"></script>
 	</body>
 </html>
